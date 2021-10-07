@@ -14,8 +14,18 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Color(0XFFF8F8F8),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           commonContainer(check: true, context: context),
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0, top: 20.0, bottom: 20.0),
+            child: Text('Categories',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 0.25,
+                  fontSize: 20.0,
+                )),
+          ),
         ],
       ),
     );
