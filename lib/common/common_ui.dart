@@ -20,13 +20,23 @@ Container commonContainer({bool check, String title, context}) {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              check == true
+                  ? Container()
+                  : GestureDetector(
+                      onTap: () => Navigator.pop(context),
+                      child: Icon(
+                        Icons.keyboard_arrow_left,
+                        color: Colors.white,
+                        size: 25.0,
+                      ),
+                    ),
               Spacer(),
               check == true
                   ? Container()
                   : Text(
                       title,
                       style: TextStyle(
-                        fontSize: 18.0,
+                        fontSize: 22.0,
                         color: Colors.white,
                       ),
                     ),
